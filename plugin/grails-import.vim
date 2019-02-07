@@ -60,5 +60,3 @@ augroup grailsImport
 		endif
 	endfunction
 augroup END
-
-nnoremap <leader>I :call GrailsImport()<cr>
