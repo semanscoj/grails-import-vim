@@ -1,4 +1,4 @@
-let s:root = '~/projects/citygusto' 
+let s:root = getcwd() 
 let s:top = 'com'
 
 augroup grailsImport
@@ -51,12 +51,14 @@ augroup grailsImport
 		if len(path) > 1
 			let success = AppendUnique(path)
 			if success
-				:echo 'x'
+				:echo 'Import Added!'
 			else
-				:echo 'y'
+				:echo 'Import Exists'
 			endif
 		else
-			:echo 'Import not found'
+			:echo 'Import Not Found'
 		endif
 	endfunction
 augroup END
+
+nnoremap <leader>I :call GrailsImport()<cr>
